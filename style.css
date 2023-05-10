@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  background: rgb(95, 131, 160);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.begin {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgb(28, 104, 151);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  display: none;
+  position: relative;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(28, 104, 151, 0);
+  border: 2px solid rgb(28, 104, 151);
+  animation: fly 2s ease 1 reverse, travel 2s linear 1;
+}
+
+.circle-two {
+  display: none;
+  position: relative;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(28, 104, 151);
+  border: 2px solid rgb(28, 104, 151);
+}
+
+.round {
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgb(28, 104, 151);
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-check {
+  font-size: 20px;
+  color: white;
+}
+
+.fa-plane-up.static {
+  font-size: 20px;
+  right: 12px;
+}
+
+.fa-plane-up {
+  font-size: 20px;
+  position: absolute;
+  right: -10px;
+}
+
+.fa-plane-up.start {
+  font-size: 20px;
+  right: 12px;
+  animation: departure 4s linear;
+}
+
+button {
+  width: 60px;
+  height: 20px;
+  background: rgb(28, 104, 151);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes departure {
+  0% {
+    transform: scale(0.5);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: translateX(22px);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes jet {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes travel {
+  0% {
+    background: rgb(28, 104, 151, 0);
+  }
+  25% {
+    background: rgb(28, 104, 151, 0.25);
+  }
+  50% {
+    background: rgb(28, 104, 151, 0.5);
+  }
+  75% {
+    background: rgb(28, 104, 151, 0.75);
+  }
+  100% {
+    background: rgb(28, 104, 151);
+  }
+}
