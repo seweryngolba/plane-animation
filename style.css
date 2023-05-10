@@ -35,7 +35,6 @@ body {
   border-radius: 50%;
   background: rgb(28, 104, 151, 0);
   border: 2px solid rgb(28, 104, 151);
-  animation: fly 2s ease 1 reverse, travel 2s linear 1;
 }
 
 .circle-two {
